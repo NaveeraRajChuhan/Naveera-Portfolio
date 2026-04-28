@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark" data-color="aqua">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,19 @@
 </head>
 <body>
 
+    <div class="theme-controller">
+        <div class="mode-switch" onclick="toggleMode()">
+            <span id="mode-icon">🌙</span>
+        </div>
+        <div class="color-palette">
+            <button class="color-dot royal" onclick="setColor('royal')" title="Royal (Red & Gold)"></button>
+            <button class="color-dot aqua" onclick="setColor('aqua')" title="Aqua (Blue)"></button>
+            <button class="color-dot emerald" onclick="setColor('emerald')" title="Emerald (Green)"></button>
+            <button class="color-dot amber" onclick="setColor('amber')" title="Amber (Orange)"></button>
+            <button class="color-dot candy" onclick="setColor('candy')" title="Candy (Pink)"></button>
+        </div>
+    </div>
+
     <nav class="sidebar">
         <div class="logo">NN<span>.</span></div>
         <ul class="nav-links">
@@ -19,7 +32,7 @@
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="side-footer">VU Student</div>
+        <div class="side-footer">VU Student | Semester 2</div>
     </nav>
 
     <main class="content">
@@ -52,7 +65,7 @@
             </div>
         </section>
 
-        <section id="services" class="py-100 bg-dark-soft">
+        <section id="services" class="py-100 bg-soft">
             <div class="container">
                 <h2 class="section-heading text-center">My Expertise</h2>
                 <div class="row g-4 mt-4">
@@ -81,14 +94,14 @@
         <section id="portfolio" class="py-100">
             <div class="container">
                 <h2 class="section-heading">Project Showcase</h2>
-                <div class="portfolio-grid" id="masonry-gallery">
+                <div class="portfolio-grid">
                     <div class="work-item"><img src="https://picsum.photos/400/500?random=1" alt="Work"></div>
                     <div class="work-item"><img src="https://picsum.photos/400/300?random=2" alt="Work"></div>
                     <div class="work-item"><img src="https://picsum.photos/400/600?random=3" alt="Work"></div>
                     <div class="work-item"><img src="https://picsum.photos/400/400?random=4" alt="Work"></div>
                     <div class="work-item"><img src="https://picsum.photos/400/550?random=5" alt="Work"></div>
                     <div class="work-item"><img src="https://picsum.photos/400/350?random=6" alt="Work"></div>
-                    </div>
+                </div>
             </div>
         </section>
 
@@ -97,7 +110,7 @@
                 <h2 class="section-heading">Get In Touch</h2>
                 <div class="contact-box">
                     <p>LinkedIn: <a href="#">linkedin.com/in/naveeranaeem</a></p>
-                    <p>Email: <a href="mailto:you@email.com">naveera@email.com</a></p>
+                    <p>Email: <a href="mailto:naveera@email.com">naveera@email.com</a></p>
                     <p>Number: +92 300 0000000</p>
                 </div>
             </div>
