@@ -11,14 +11,12 @@ function toggleMode() {
     body.setAttribute('data-theme', newMode);
     icon.innerText = newMode === 'dark' ? '🌙' : '☀️';
     
-    // Animate transition
     gsap.fromTo("body", { opacity: 0.8 }, { opacity: 1, duration: 0.5 });
 }
 
 function setColor(colorName) {
     document.documentElement.setAttribute('data-color', colorName);
     
-    // Visual feedback animation
     gsap.from(".section-heading, .logo span, .btn-nexus", {
         scale: 0.9,
         duration: 0.3,
@@ -27,7 +25,26 @@ function setColor(colorName) {
     });
 }
 
-// 2. Animations (GSAP)
+// 2. Show More Logic
+function showMoreImages() {
+    const extraImages = document.querySelectorAll('.extra-image');
+    const btn = document.getElementById('show-more-btn');
+
+    extraImages.forEach(img => {
+        img.classList.remove('d-none');
+        // Animation for new images
+        gsap.from(img, {
+            scale: 0.5,
+            opacity: 0,
+            duration: 0.6,
+            ease: "power2.out"
+        });
+    });
+
+    btn.style.display = 'none'; // Hide button after showing all
+}
+
+// 3. Animations (GSAP)
 window.addEventListener('load', () => {
     const tl = gsap.timeline();
     
@@ -51,6 +68,19 @@ gsap.utils.toArray(".scroll-reveal").forEach(el => {
     });
 });
 
+// Form Interaction Animation
+const formInputs = document.querySelectorAll('.form-group input, .form-group textarea');
+formInputs.forEach(input => {
+    input.addEventListener('focus', () => {
+        gsap.to(input, { paddingLeft: "10px", duration: 0.3 });
+    });
+    input.addEventListener('blur', () => {
+        if (input.value === "") {
+            gsap.to(input, { paddingLeft: "0px", duration: 0.3 });
+        }
+    });
+});
+
 // Smooth Scroll
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.onclick = (e) => {
@@ -58,7 +88,6 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         const target = document.querySelector(link.getAttribute('href'));
         window.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
         
-        // Update active class
         document.querySelectorAll('.nav-links a').forEach(l => l.classList.remove('active'));
         link.classList.add('active');
     };

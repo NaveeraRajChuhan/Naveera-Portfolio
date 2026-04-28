@@ -92,23 +92,64 @@
         </section>
 
         <section id="portfolio" class="py-100">
-            <div class="container">
+            <div class="container text-center">
                 <h2 class="section-heading">Project Showcase</h2>
-                <div class="portfolio-grid">
-                    <div class="work-item"><img src="https://picsum.photos/400/500?random=1" alt="Work"></div>
-                    <div class="work-item"><img src="https://picsum.photos/400/300?random=2" alt="Work"></div>
-                    <div class="work-item"><img src="https://picsum.photos/400/600?random=3" alt="Work"></div>
-                    <div class="work-item"><img src="https://picsum.photos/400/400?random=4" alt="Work"></div>
-                    <div class="work-item"><img src="https://picsum.photos/400/550?random=5" alt="Work"></div>
-                    <div class="work-item"><img src="https://picsum.photos/400/350?random=6" alt="Work"></div>
+                <div class="portfolio-grid" id="portfolio-container">
+                    <a href="your-github-link-here" class="work-item"><img src="images/img4.png" alt="Work"></a>
+                    <a href="your-github-link-here" class="work-item"><img src="images/img3.png" alt="Work"></a>
+                    <a href="your-github-link-here" class="work-item"><img src="images/img2.png" alt="Work"></a>
+                    <a href="your-github-link-here" class="work-item"><img src="images/img1.png" alt="Work"></a>
+                    <a href="your-github-link-here" class="work-item"><img src="images/img6.png" alt="Work"></a>
+                    <a href="your-github-link-here" class="work-item"><img src="images/img5.png" alt="Work"></a>
+                    
+                    <a href="#" class="work-item extra-image d-none"><img src="images/img7.png" alt="Work"></a>
+                    <a href="#" class="work-item extra-image d-none"><img src="images/img8.png" alt="Work"></a>
+                    <a href="#" class="work-item extra-image d-none"><img src="images/img9.png" alt="Work"></a>
+                    <a href="#" class="work-item extra-image d-none"><img src="images/img10.png" alt="Work"></a>
+                    <a href="#" class="work-item extra-image d-none"><img src="images/img11.png" alt="Work"></a>
+                    <a href="#" class="work-item extra-image d-none"><img src="images/img12.png" alt="Work"></a>
+                    <a href="#" class="work-item extra-image d-none"><img src="images/img13.png" alt="Work"></a>
+                    <a href="#" class="work-item extra-image d-none"><img src="images/img14.png" alt="Work"></a>
+                    <a href="#" class="work-item extra-image d-none"><img src="images/img15.png" alt="Work"></a>
                 </div>
+                <button class="btn btn-nexus mt-5" id="show-more-btn" onclick="showMoreImages()">Show More Projects</button>
             </div>
         </section>
 
-        <section id="contact" class="py-100">
-            <div class="container text-center">
-                <h2 class="section-heading">Get In Touch</h2>
-                <div class="contact-box">
+        <section id="contact" class="py-100 bg-soft">
+            <div class="container">
+                <h2 class="section-heading text-center">Get In Touch</h2>
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-8">
+                        <form id="contact-form" class="contact-form scroll-reveal">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Your Name" required>
+                                        <div class="form-line"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" placeholder="Email Address" required>
+                                        <div class="form-line"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                                        <div class="form-line"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-nexus">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="contact-box mt-5 text-center">
                     <p>LinkedIn: <a href="#">linkedin.com/in/naveeranaeem</a></p>
                     <p>Email: <a href="mailto:naveera@email.com">naveera@email.com</a></p>
                     <p>Number: +92 300 0000000</p>
