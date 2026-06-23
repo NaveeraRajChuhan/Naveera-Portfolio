@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark" data-color="aqua">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naveera Naeem | Full Stack Developer & Designer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div class="theme-controller">
@@ -53,82 +56,42 @@
                     <div class="col-md-6 scroll-reveal">
                         <h2 class="section-heading">About Me</h2>
                         <!-- <p>.</p> -->
-                         <div class="about-section">
+                        <div class="about-section">
 
-  <p id="aboutText">
-    I am a passionate Full Stack Developer and Web Designer with a strong foundation in modern web technologies and a deep commitment to creating exceptional digital experiences. My expertise spans both front-end and back-end development, allowing me to transform ideas into scalable, high-performance, and visually engaging web applications.
+                            <p id="aboutText">
+                                I am a passionate Full Stack Developer and Web Designer with a strong foundation in
+                                modern web technologies and a deep commitment to creating exceptional digital
+                                experiences. My expertise spans both front-end and back-end development, allowing me to
+                                transform ideas into scalable, high-performance, and visually engaging web applications.
 
-    <span id="dots">...</span>
+                                <span id="dots">...</span>
 
-    <span id="moreText" style="display:none;">
-   With expertise in HTML, CSS, JavaScript, Tailwind CSS, React.js, Node.js, and MongoDB, I specialize in building responsive, user-focused, and high-performance web applications. I am passionate about crafting modern digital experiences that combine clean design, seamless functionality, and exceptional user experience.
+                                <span id="moreText" style="display:none;">
+                                    With expertise in HTML, CSS, JavaScript, Tailwind CSS, React.js, Node.js, and
+                                    MongoDB, I specialize in building responsive, user-focused, and high-performance web
+                                    applications. I am passionate about crafting modern digital experiences that combine
+                                    clean design, seamless functionality, and exceptional user experience.
 
-Web design is one of my core strengths. I enjoy creating visually appealing websites, interactive interfaces, dynamic dashboards, and full-stack applications that are both engaging and functional. My focus is on responsive layouts, smooth animations, optimized performance, and intuitive UI/UX design that helps brands establish a strong online presence.
+                                    Web design is one of my core strengths. I enjoy creating visually appealing
+                                    websites, interactive interfaces, dynamic dashboards, and full-stack applications
+                                    that are both engaging and functional. My focus is on responsive layouts, smooth
+                                    animations, optimized performance, and intuitive UI/UX design that helps brands
+                                    establish a strong online presence.
 
-Beyond web development, I have experience with n8n automation, Prompt Engineering, Python, and C++, enabling me to build intelligent, scalable, and efficient solutions. I also possess graphic design skills, allowing me to blend creativity with technology and deliver visually compelling digital products.
+                                    Beyond web development, I have experience with n8n automation, Prompt Engineering,
+                                    Python, and C++, enabling me to build intelligent, scalable, and efficient
+                                    solutions. I also possess graphic design skills, allowing me to blend creativity
+                                    with technology and deliver visually compelling digital products.
 
-I continuously explore new technologies and industry trends, striving to create innovative solutions that provide real value while maintaining the highest standards of design and development.
-
-    </span>
-  </p>
-
-  <button id="readMoreBtn" onclick="toggleReadMore()">
-    Read More
-  </button>
-
-</div>
-
-<style>
-.about-section{
-    max-width:900px;
-    margin:auto;
-}
-
-#aboutText{
-    font-size:18px;
-    line-height:1.9;
-    color:#d1d5db;
-}
-
-#readMoreBtn{
-    margin-top:20px;
-    margin-bottom: 40px;
-    padding:8px 15px;
-    border:none;
-    border-radius:50px;
-    cursor:pointer;
-    font-size:16px;
-    font-weight:600;
-    /* background:linear-gradient(135deg,#7c3aed,#a855f7); */
-    background-color: transparent;
-    border-color: rgb(255, 255, 255);
-    color:white;
-    transition:0.3s;
-}
-
-#readMoreBtn:hover{
-    transform:translateY(-3px);
-}
-</style>
-
-<script>
-function toggleReadMore() {
-
-    let dots = document.getElementById("dots");
-    let moreText = document.getElementById("moreText");
-    let btn = document.getElementById("readMoreBtn");
-
-    if (moreText.style.display === "none") {
-        moreText.style.display = "inline";
-        dots.style.display = "none";
-        btn.innerHTML = "Read Less";
-    } else {
-        moreText.style.display = "none";
-        dots.style.display = "inline";
-        btn.innerHTML = "Read More";
-    }
-}
-</script>
+                                    I continuously explore new technologies and industry trends, striving to create
+                                    innovative solutions that provide real value while maintaining the highest standards
+                                    of design and development.
+                                </span>
+                            </p>
+                            <button id="readMoreBtn" onclick="toggleReadMore()">
+                                Read More
+                            </button>
+                        </div>
                         <ul class="skills-grid">
                             <li>Python</li>
                             <li>JavaScript</li>
@@ -171,48 +134,69 @@ function toggleReadMore() {
             <div class="container text-center">
                 <h2 class="section-heading">Project Showcase</h2>
                 <div class="portfolio-grid" id="portfolio-container">
-                    <a href="https://naveerarajchuhan.github.io/electronics-website-ecommerce-bootstrap-css-responsive/" class="work-item hov-eff"><img src="images/img4.png" alt="Work"></a>
-                    <a href="https://naveerarajchuhan.github.io/E-Commerce-website2-js/" class="work-item  hov-eff"><img src="images/img3.png" alt="Work"></a>
-                    <a href="https://naveerarajchuhan.github.io/E-Commerce-website2-js/" class="work-item  hov-eff"><img src="images/img2.png" alt="Work"></a>
-                    <a href="https://naveerarajchuhan.github.io/YUMIEZ-TECH-Website/" class="work-item  hov-eff"><img src="images/img1.png" alt="Work"></a>
-                    <a href="https://food-website-react-jet.vercel.app" class="work-item  hov-eff"><img src="images/img6.png" alt="Work"></a>
-                    <a href="https://chocolate-website-reactjs.vercel.app/" class="work-item hov-eff"><img src="images/img5.png" alt="Work"></a>
-                    
-
-                    <a href="https://book-website-react.vercel.app/" class="work-item extra-image d-none"><img src="images/img7.png" alt="Work"></a>
-                    <a href="https://naveerarajchuhan.github.io/alarm-clock/" class="work-item extra-image d-none"><img src="images/img8.png" alt="Work"></a>
+                    <a href="https://naveerarajchuhan.github.io/electronics-website-ecommerce-bootstrap-css-responsive/"
+                        class="work-item hov-eff"><img src="images/img4.png" alt="Work"></a>
+                    <a href="https://naveerarajchuhan.github.io/E-Commerce-website2-js/" class="work-item  hov-eff"><img
+                            src="images/img3.png" alt="Work"></a>
+                    <a href="https://naveerarajchuhan.github.io/E-Commerce-website2-js/" class="work-item  hov-eff"><img
+                            src="images/img2.png" alt="Work"></a>
+                    <a href="https://naveerarajchuhan.github.io/YUMIEZ-TECH-Website/" class="work-item  hov-eff"><img
+                            src="images/img1.png" alt="Work"></a>
+                    <a href="https://food-website-react-jet.vercel.app" class="work-item  hov-eff"><img
+                            src="images/img6.png" alt="Work"></a>
+                    <a href="https://chocolate-website-reactjs.vercel.app/" class="work-item hov-eff"><img
+                            src="images/img5.png" alt="Work"></a>
+                    <a href="https://book-website-react.vercel.app/" class="work-item extra-image d-none"><img
+                            src="images/img7.png" alt="Work"></a>
+                    <a href="https://naveerarajchuhan.github.io/alarm-clock/" class="work-item extra-image d-none"><img
+                            src="images/img8.png" alt="Work"></a>
                     <a href="#" class="work-item extra-image d-none"><img src="images/img9.png" alt="Work"></a>
-                    <a href="https://naveerarajchuhan.github.io/chess-game-js/" class="work-item extra-image d-none"><img src="images/img10.png" alt="Work"></a>
-                    <a href="https://naveerarajchuhan.github.io/memory-app/" class="work-item extra-image d-none"><img src="images/img16.png" alt="Work"></a>
-                    <a href="https://naveerarajchuhan.github.io/Drag---Drop/" class="work-item extra-image d-none"><img src="images/img17.png" alt="Work"></a>
-                    <a href="https://naveerarajchuhan.github.io/WORD-MASTER-js/" class="work-item extra-image d-none"><img src="images/img18.png" alt="Work"></a>
-                    <a href="https://naveerarajchuhan.github.io/COLOR-CASCADE-js/" class="work-item extra-image d-none"><img src="images/img19.png" alt="Work"></a>
-                    <a href="https://naveerarajchuhan.github.io/typing-speed-test-app-js/" class="work-item extra-image d-none"><img src="images/img20.png" alt="Work"></a>
-                    <a href="https://naveerarajchuhan.github.io/light-bulb2/" class="work-item extra-image d-none"><img src="images/img21.png" alt="Work"></a>
-                    <a href="https://react-web-clone.vercel.app" class="work-item extra-image d-none"><img src="images/img22.png" alt="Work"></a>
-                    <a href="https://naveerarajchuhan.github.io/chatbot-app/" class="work-item extra-image d-none"><img src="images/img23.png" alt="Work"></a>
-                    <a href="https://naveerarajchuhan.github.io/Percentage-calculator-js/" class="work-item extra-image d-none"><img src="images/img24.png" alt="Work"></a>
-                    <a href="https://naveerarajchuhan.github.io/Portfolio-Builder-App/#templates" class="work-item extra-image d-none"><img src="images/img25.png" alt="Work"></a>
-                    <a href="https://naveerarajchuhan.github.io/tracker-app-js/" class="work-item extra-image d-none"><img src="images/img26.png" alt="Work"></a>
-                    <a href="https://naveerarajchuhan.github.io/stock-trading-app-js/" class="work-item extra-image d-none"><img src="images/img27.png" alt="Work"></a>
-                    <a href="https://naveerarajchuhan.github.io/expense-tracker--js/" class="work-item extra-image d-none"><img src="images/img28.png" alt="Work"></a>
-                    <a href="https://naveerarajchuhan.github.io/todo-application-1st/" class="work-item extra-image d-none"><img src="images/img29.png" alt="Work"></a>
-                    <a href="https://naveerarajchuhan.github.io/modal2/" class="work-item extra-image d-none"><img src="images/img30.png" alt="Work"></a>
+                    <a href="https://naveerarajchuhan.github.io/chess-game-js/"
+                        class="work-item extra-image d-none"><img src="images/img10.png" alt="Work"></a>
+                    <a href="https://naveerarajchuhan.github.io/memory-app/" class="work-item extra-image d-none"><img
+                            src="images/img16.png" alt="Work"></a>
+                    <a href="https://naveerarajchuhan.github.io/Drag---Drop/" class="work-item extra-image d-none"><img
+                            src="images/img17.png" alt="Work"></a>
+                    <a href="https://naveerarajchuhan.github.io/WORD-MASTER-js/"
+                        class="work-item extra-image d-none"><img src="images/img18.png" alt="Work"></a>
+                    <a href="https://naveerarajchuhan.github.io/COLOR-CASCADE-js/"
+                        class="work-item extra-image d-none"><img src="images/img19.png" alt="Work"></a>
+                    <a href="https://naveerarajchuhan.github.io/typing-speed-test-app-js/"
+                        class="work-item extra-image d-none"><img src="images/img20.png" alt="Work"></a>
+                    <a href="https://naveerarajchuhan.github.io/light-bulb2/" class="work-item extra-image d-none"><img
+                            src="images/img21.png" alt="Work"></a>
+                    <a href="https://react-web-clone.vercel.app" class="work-item extra-image d-none"><img
+                            src="images/img22.png" alt="Work"></a>
+                    <a href="https://naveerarajchuhan.github.io/chatbot-app/" class="work-item extra-image d-none"><img
+                            src="images/img23.png" alt="Work"></a>
+                    <a href="https://naveerarajchuhan.github.io/Percentage-calculator-js/"
+                        class="work-item extra-image d-none"><img src="images/img24.png" alt="Work"></a>
+                    <a href="https://naveerarajchuhan.github.io/Portfolio-Builder-App/#templates"
+                        class="work-item extra-image d-none"><img src="images/img25.png" alt="Work"></a>
+                    <a href="https://naveerarajchuhan.github.io/tracker-app-js/"
+                        class="work-item extra-image d-none"><img src="images/img26.png" alt="Work"></a>
+                    <a href="https://naveerarajchuhan.github.io/stock-trading-app-js/"
+                        class="work-item extra-image d-none"><img src="images/img27.png" alt="Work"></a>
+                    <a href="https://naveerarajchuhan.github.io/expense-tracker--js/"
+                        class="work-item extra-image d-none"><img src="images/img28.png" alt="Work"></a>
+                    <a href="https://naveerarajchuhan.github.io/todo-application-1st/"
+                        class="work-item extra-image d-none"><img src="images/img29.png" alt="Work"></a>
+                    <a href="https://naveerarajchuhan.github.io/modal2/" class="work-item extra-image d-none"><img
+                            src="images/img30.png" alt="Work"></a>
                     <!-- <a href="#" class="work-item extra-image d-none"><img src="images/img31.png" alt="Work"></a> -->
-
-
-
-
-
-
-
-                    <a href="https://naveerarajchuhan.github.io/Food-Panda/" class="work-item extra-image d-none"><img src="images/img11.png" alt="Work"></a>
-                    <a href="https://naveerarajchuhan.github.io/house/" class="work-item extra-image d-none"><img src="images/img12.png" alt="Work"></a>
-                    <a href="https://naveerarajchuhan.github.io/hackathon-css-bootstrap-SMIT/" class="work-item extra-image d-none"><img src="images/img13.png" alt="Work"></a>
-                    <a href="https://naveerarajchuhan.github.io/pokemon-cards/" class="work-item extra-image d-none"><img src="images/img14.png" alt="Work"></a>
-                    <a href="https://naveerarajchuhan.github.io/calculator-js/" class="work-item extra-image d-none"><img src="images/img15.png" alt="Work"></a>
+                    <a href="https://naveerarajchuhan.github.io/Food-Panda/" class="work-item extra-image d-none"><img
+                            src="images/img11.png" alt="Work"></a>
+                    <a href="https://naveerarajchuhan.github.io/house/" class="work-item extra-image d-none"><img
+                            src="images/img12.png" alt="Work"></a>
+                    <a href="https://naveerarajchuhan.github.io/hackathon-css-bootstrap-SMIT/"
+                        class="work-item extra-image d-none"><img src="images/img13.png" alt="Work"></a>
+                    <a href="https://naveerarajchuhan.github.io/pokemon-cards/"
+                        class="work-item extra-image d-none"><img src="images/img14.png" alt="Work"></a>
+                    <a href="https://naveerarajchuhan.github.io/calculator-js/"
+                        class="work-item extra-image d-none"><img src="images/img15.png" alt="Work"></a>
                 </div>
-                <button class="btn btn-nexus mt-5" id="show-more-btn" onclick="showMoreImages()">Show More Projects</button>
+                <button class="btn btn-nexus mt-5" id="show-more-btn" onclick="showMoreImages()">Show More
+                    Projects</button>
             </div>
         </section>
 
@@ -250,7 +234,8 @@ function toggleReadMore() {
                 </div>
 
                 <div class="contact-box mt-5 text-center">
-                    <p>LinkedIn: <a href="https://linkedin.com/in/naveeranaeem" target="_blank">linkedin.com/in/naveeranaeem</a></p>
+                    <p>LinkedIn: <a href="https://linkedin.com/in/naveeranaeem"
+                            target="_blank">linkedin.com/in/naveeranaeem</a></p>
                     <p>Email: <a href="mailto:naveera@email.com">naveera@email.com</a></p>
                     <p>Number: +92 310 1159646</p>
                 </div>
@@ -262,4 +247,5 @@ function toggleReadMore() {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

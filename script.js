@@ -3,92 +3,113 @@ gsap.registerPlugin(ScrollTrigger);
 
 // 1. Theme and Color Logic
 function toggleMode() {
-    const body = document.documentElement;
-    const currentMode = body.getAttribute('data-theme');
-    const newMode = currentMode === 'dark' ? 'light' : 'dark';
-    const icon = document.getElementById('mode-icon');
-    
-    body.setAttribute('data-theme', newMode);
-    icon.innerText = newMode === 'dark' ? '🌙' : '☀️';
-    
-    gsap.fromTo("body", { opacity: 0.8 }, { opacity: 1, duration: 0.5 });
+  const body = document.documentElement;
+  const currentMode = body.getAttribute("data-theme");
+  const newMode = currentMode === "dark" ? "light" : "dark";
+  const icon = document.getElementById("mode-icon");
+
+  body.setAttribute("data-theme", newMode);
+  icon.innerText = newMode === "dark" ? "🌙" : "☀️";
+
+  gsap.fromTo("body", { opacity: 0.8 }, { opacity: 1, duration: 0.5 });
 }
 
 function setColor(colorName) {
-    document.documentElement.setAttribute('data-color', colorName);
-    
-    gsap.from(".section-heading, .logo span, .btn-nexus", {
-        scale: 0.9,
-        duration: 0.3,
-        stagger: 0.1,
-        ease: "back.out"
-    });
+  document.documentElement.setAttribute("data-color", colorName);
+
+  gsap.from(".section-heading, .logo span, .btn-nexus", {
+    scale: 0.9,
+    duration: 0.3,
+    stagger: 0.1,
+    ease: "back.out",
+  });
 }
 
 // 2. Show More Logic
 function showMoreImages() {
-    const extraImages = document.querySelectorAll('.extra-image');
-    const btn = document.getElementById('show-more-btn');
+  const extraImages = document.querySelectorAll(".extra-image");
+  const btn = document.getElementById("show-more-btn");
 
-    extraImages.forEach(img => {
-        img.classList.remove('d-none');
-        // Animation for new images
-        gsap.from(img, {
-            scale: 0.5,
-            opacity: 0,
-            duration: 0.6,
-            ease: "power2.out"
-        });
+  extraImages.forEach((img) => {
+    img.classList.remove("d-none");
+    // Animation for new images
+    gsap.from(img, {
+      scale: 0.5,
+      opacity: 0,
+      duration: 0.6,
+      ease: "power2.out",
     });
+  });
 
-    btn.style.display = 'none'; // Hide button after showing all
+  btn.style.display = "none"; // Hide button after showing all
 }
 
 // 3. Animations (GSAP)
-window.addEventListener('load', () => {
-    const tl = gsap.timeline();
-    
-    tl.from(".sidebar", { x: -300, duration: 1, ease: "power3.out" })
-      .from(".reveal-text", { y: 50, opacity: 0, duration: 0.8 }, "-=0.5")
-      .from(".main-title", { x: -50, opacity: 0, duration: 1 }, "-=0.5")
-      .from(".lead", { opacity: 0, y: 20, duration: 0.8 }, "-=0.5")
-      .from(".theme-controller", { opacity: 0, y: -20, duration: 0.5 });
+window.addEventListener("load", () => {
+  const tl = gsap.timeline();
+
+  tl.from(".sidebar", { x: -300, duration: 1, ease: "power3.out" })
+    .from(".reveal-text", { y: 50, opacity: 0, duration: 0.8 }, "-=0.5")
+    .from(".main-title", { x: -50, opacity: 0, duration: 1 }, "-=0.5")
+    .from(".lead", { opacity: 0, y: 20, duration: 0.8 }, "-=0.5")
+    .from(".theme-controller", { opacity: 0, y: -20, duration: 0.5 });
 });
 
 // Scroll reveals
-gsap.utils.toArray(".scroll-reveal").forEach(el => {
-    gsap.from(el, {
-        scrollTrigger: {
-            trigger: el,
-            start: "top 85%"
-        },
-        y: 40,
-        opacity: 0,
-        duration: 1
-    });
+gsap.utils.toArray(".scroll-reveal").forEach((el) => {
+  gsap.from(el, {
+    scrollTrigger: {
+      trigger: el,
+      start: "top 85%",
+    },
+    y: 40,
+    opacity: 0,
+    duration: 1,
+  });
 });
 
 // Form Interaction Animation
-const formInputs = document.querySelectorAll('.form-group input, .form-group textarea');
-formInputs.forEach(input => {
-    input.addEventListener('focus', () => {
-        gsap.to(input, { paddingLeft: "10px", duration: 0.3 });
-    });
-    input.addEventListener('blur', () => {
-        if (input.value === "") {
-            gsap.to(input, { paddingLeft: "0px", duration: 0.3 });
-        }
-    });
+const formInputs = document.querySelectorAll(
+  ".form-group input, .form-group textarea",
+);
+formInputs.forEach((input) => {
+  input.addEventListener("focus", () => {
+    gsap.to(input, { paddingLeft: "10px", duration: 0.3 });
+  });
+  input.addEventListener("blur", () => {
+    if (input.value === "") {
+      gsap.to(input, { paddingLeft: "0px", duration: 0.3 });
+    }
+  });
 });
 
 // Smooth Scroll
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.onclick = (e) => {
-        e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
-        window.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
-        
-        document.querySelectorAll('.nav-links a').forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-    };
+document.querySelectorAll(".nav-links a").forEach((link) => {
+  link.onclick = (e) => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute("href"));
+    window.scrollTo({ top: target.offsetTop, behavior: "smooth" });
+
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach((l) => l.classList.remove("active"));
+    link.classList.add("active");
+  };
 });
+
+// About Section Projects
+function toggleReadMore() {
+  let dots = document.getElementById("dots");
+  let moreText = document.getElementById("moreText");
+  let btn = document.getElementById("readMoreBtn");
+
+  if (moreText.style.display === "none") {
+    moreText.style.display = "inline";
+    dots.style.display = "none";
+    btn.innerHTML = "Read Less";
+  } else {
+    moreText.style.display = "none";
+    dots.style.display = "inline";
+    btn.innerHTML = "Read More";
+  }
+}
